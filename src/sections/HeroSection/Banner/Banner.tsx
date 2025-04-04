@@ -1,13 +1,34 @@
+"use client";
+
 import SectionWrap from "@/components/common/SectionWrap/SectionWrap";
 import { Asterix } from "@/components/svgs/svgs";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Banner() {
+	const [isScrolled, setIsScrolled] = useState(false);
+
+	const handleScroll = () => {
+		if (window.scrollY > 150) {
+			setIsScrolled(true);
+		} else {
+			setIsScrolled(false);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 	return (
 		<SectionWrap>
 			<div className="pt-[120px] w-full">
 				<div className="flex items-start w-full">
-					<div className="w-[220px]">
+					<div
+						className={` transition-all duration-300 ${
+							isScrolled ? "opacity-0 w-0" : "opacity-100 w-[220px]"
+						}`}>
 						<Asterix />
 					</div>
 

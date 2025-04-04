@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function OurWork() {
 	return (
 		<SectionWrap className="bg-white">
-			<div>
+			<div className="track-section">
 				<div className="mt-[30px] flex items-start justify-between pb-6">
 					<div className="flex flex-row items-center">
 						<div className="flex items-center gap-2 w-[180px]">

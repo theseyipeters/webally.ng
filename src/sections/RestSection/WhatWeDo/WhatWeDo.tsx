@@ -4,7 +4,9 @@ import Link from "next/link";
 export default function WhatWeDo() {
 	return (
 		<SectionWrap className="bg-white">
-			<div className="">
+			<section
+				data-theme="dark"
+				className="">
 				<div className="flex flex-col">
 					<h1 className="text-[40px] tracking-tighter font-medium leading-[82px]">
 						What we do
@@ -75,7 +77,7 @@ export default function WhatWeDo() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		</SectionWrap>
 	);
 }
