@@ -5,14 +5,14 @@ import { data, FooterItem } from "./data";
 
 export default function Footer() {
 	return (
-		<div className="bg-[#142828] text-white h-screen py-[120px] px-[15px] md:px-[30px] lg:px-[150px] relative">
-			<div className="flex gap-[400px] items-start pb-[60px] border-b border-[#1F3232]">
-				<div className="text-white mt-2">
+		<div className="bg-[#142828] text-white xl:h-screen py-[50px] lg:py-[120px] px-[15px] md:px-[30px] lg:px-[100px] xl:px-[150px] relative">
+			<div className="flex flex-col lg:flex-row gap-x-[100px] lg:gap-x-[200px] xl:gap-[400px] items-start pb-[60px] border-b border-[#1F3232]">
+				<div className="text-white mt-0 lg:mt-2 mb-4 lg:mb-0">
 					<Asterix />
 				</div>
 
 				<div className="flex flex-col">
-					<h1 className="text-[54px] tracking-tighter font-medium leading-[82px] text-white">
+					<h1 className="text-[40px] md:text-[45px]  xl:text-[54px] tracking-tighter font-medium leading-[54px] md:leading-[62px] xl:leading-[82px] text-white">
 						Let&apos;s create something exceptional
 					</h1>
 
@@ -36,8 +36,8 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className="w-full flex items-start gap-[400px]">
-				<div className="text-white mt-2 opacity-0">
+			<div className="w-full flex items-start gap-[100px] lg:gap-[200px] xl:gap-[400px]">
+				<div className="hidden lg:block text-white mt-2 opacity-0">
 					<Asterix />
 				</div>
 
@@ -64,7 +64,7 @@ interface FooterItemProps {
 
 function FooterBox({ footerItem }: FooterItemProps) {
 	return (
-		<div className="flex flex-col w-[200px]">
+		<div className="flex flex-col w-fit lg:w-[200px]">
 			<p className="font-semibold text-lg text-white">{footerItem.title}</p>
 
 			{footerItem.itemList && (
@@ -72,7 +72,7 @@ function FooterBox({ footerItem }: FooterItemProps) {
 					{footerItem.itemList.map((item, index) => (
 						<Link
 							key={index}
-							className="max-w-[150px] text-white-1 hover:underline underline-offset-4 transition-all duration-300"
+							className="w-fit lg:max-w-[150px] text-white-1 hover:underline underline-offset-4 transition-all duration-300"
 							href={item.href}>
 							{item.label}
 						</Link>

@@ -33,6 +33,56 @@ button {
 	font-family: "ES Grotesk", Helvetica, sans-serif;
 }
 
-/* nav {
-	mix-blend-mode: difference;
-} */
+.project-image-container {
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@media (min-width: 1024px) {
+}
+@media (max-width: 768px) {
+}
+
+@media (min-width: 901px) and (max-width: 1023px) {
+	.project-image-container {
+		width: 70%;
+		bottom: -150px;
+	}
+}
+@media (min-width: 838px) and (max-width: 900px) {
+	.project-image-container {
+		width: 80%;
+		bottom: -150px;
+	}
+}
+@media (min-width: 800px) and (max-width: 837px) {
+	.project-image-container {
+		width: 90%;
+		bottom: -200px;
+	}
+}
+@media (min-width: 700px) and (max-width: 768px) {
+	.project-image-container {
+		width: 75%;
+		bottom: -50px;
+	}
+}
+@media (min-width: 600px) and (max-width: 700px) {
+	.project-image-container {
+		width: 70%;
+		bottom: -40px;
+	}
+}
+@media (min-width: 500px) and (max-width: 600px) {
+	.project-image-container {
+		width: 90%;
+	}
+}
+
+@media (max-width: 500px) {
+	.project-image-container {
+		width: 100%;
+	}
+}

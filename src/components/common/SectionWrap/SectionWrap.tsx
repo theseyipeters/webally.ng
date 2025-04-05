@@ -8,7 +8,7 @@ interface SectionWrapProps {
 export default function SectionWrap({ children, className }: SectionWrapProps) {
 	return (
 		<div
-			className={`px-[15px] md:px-[30px] lg:px-[150px] py-6 md:py-10 lg:py-[60px] ${className}`}>
+			className={`px-[15px] md:px-[30px] lg:px-[100px] xl:px-[150px] py-6 md:py-10 lg:py-[60px] ${className}`}>
 			{children}
 		</div>
 	);

@@ -7,7 +7,7 @@ import Footer from "@/components/Footer/Footer";
 
 export default function RestSection() {
 	return (
-		<div className="pt-[650px] w-full">
+		<div className="pt-[550px] lg:pt-[650px] w-full">
 			<VideoSection />
 			<WhatWeDo />
 			<OurWork />
