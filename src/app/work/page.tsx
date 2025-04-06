@@ -1,8 +1,9 @@
-import Home from "@/pagess/Home/Home";
+import Work from "@/pagess/Work/Work";
+
 export default function page() {
 	return (
 		<div>
-			<Home />
+			<Work />
 		</div>
 	);
 }

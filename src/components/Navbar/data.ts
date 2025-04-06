@@ -1,5 +1,5 @@
 export const links = [
-	{ label: "Services", href: "/" },
-	{ label: "Work", href: "/" },
-	{ label: "About", href: "/" },
+	{ label: "Services", href: "/services" },
+	{ label: "Work", href: "/work" },
+	{ label: "About", href: "/about" },
 ];
