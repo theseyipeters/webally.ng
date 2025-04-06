@@ -5,6 +5,7 @@ import { Asterix2, WeballyLogo } from "../svgs/svgs";
 import { links } from "./data";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -12,6 +13,7 @@ export default function Navbar() {
 	const [logo1, setLogo1] = useState(true);
 	const [logo2, setLogo2] = useState(false);
 	const [showMenu, setShowMenu] = useState(false);
+	const pathname = usePathname();
 
 	const handleScroll = () => {
 		if (window.scrollY > 250) {
@@ -41,7 +43,7 @@ export default function Navbar() {
 	return (
 		<>
 			<nav
-				className={`h-[70px] lg:h-[80px] px-[15px] md:px-[30px] lg:px-[100px] xl:px-[150px] flex justify-between items-center fixed top-0 left-0 right-0 w-full transition-colors duration-300 ${
+				className={`h-[70px] lg:h-[80px] px-[15px] md:px-[30px] lg:px-[100px] xl:px-[150px] flex justify-between items-center fixed top-0 left-0 right-0 w-full transition-colors duration-300 max-w-[1680px] mx-auto ${
 					isScrolled2 ? "bg-white lg:bg-transparent" : ""
 				}`}>
 				<AnimatePresence>
@@ -74,23 +76,31 @@ export default function Navbar() {
 							</motion.a>
 						)}
 
-						<div className="hidden lg:flex gap-[30px] ">
-							{links.map((link, index) => (
-								<Link
-									key={index}
-									className="font-semibold text-lg tracking-tight"
-									href={link.href}>
-									{link.label}
-								</Link>
-							))}
+						<div className="hidden lg:flex gap-[30px]">
+							{links.map((link, index) => {
+								const isActive = pathname === link.href;
+
+								return (
+									<Link
+										key={index}
+										href={link.href}
+										className={`text-lg tracking-tight navlink ${
+											isActive ? "border-b border-current" : "border-none"
+										}`}>
+										{link.label}
+									</Link>
+								);
+							})}
 						</div>
 					</div>
 				</AnimatePresence>
 
 				<div className="hidden lg:block">
-					<button className="bg-[#142828] rounded-full text-white px-6 py-2">
+					<a
+						href="/contact/new-project"
+						className="bg-[#142828] rounded-full text-white px-6 py-2">
 						Let&apos;s talk
-					</button>
+					</a>
 				</div>
 				<div
 					onClick={() => setShowMenu(true)}

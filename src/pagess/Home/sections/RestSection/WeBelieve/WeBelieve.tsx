@@ -1,10 +1,9 @@
-import SectionWrap from "@/components/common/SectionWrap/SectionWrap";
 import Link from "next/link";
 
 export default function WeBelieve() {
 	return (
-		<SectionWrap className="bg-white">
-			<div className="flex flex-col lg:flex-row gap-[40px] py-[50px] lg:py-[120px]">
+		<div className="bg-white rounded-bl-3xl rounded-br-3xl px-[15px] md:px-[30px] lg:px-[100px] xl:px-[150px] py-6 md:py-10 lg:py-[60px] w-full">
+			<div className="flex flex-col lg:flex-row gap-[40px] py-[50px] lg:py-[120px] max-w-[1680px] mx-auto">
 				<div className="rounded-xl">
 					<img
 						className="w-full lg:w-[500px] rounded-xl"
@@ -41,6 +40,6 @@ export default function WeBelieve() {
 					</p>
 				</div>
 			</div>
-		</SectionWrap>
+		</div>
 	);
 }

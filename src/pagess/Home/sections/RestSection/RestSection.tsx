@@ -11,7 +11,9 @@ export default function RestSection() {
 			<VideoSection />
 			<WhatWeDo />
 			<OurWork />
-			<WeBelieve />
+			<div className="bg-[#142828]">
+				<WeBelieve />
+			</div>
 			<Footer />
 		</div>
 	);

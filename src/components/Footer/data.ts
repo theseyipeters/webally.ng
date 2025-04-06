@@ -29,15 +29,15 @@ export const data: FooterItem[] = [
 		itemList: [
 			{
 				label: "Home",
-				href: "/about",
+				href: "/",
 			},
 			{
 				label: "Services",
-				href: "/about",
+				href: "/services",
 			},
 			{
 				label: "Work",
-				href: "/about",
+				href: "/work",
 			},
 			{
 				label: "About",
@@ -45,7 +45,7 @@ export const data: FooterItem[] = [
 			},
 			{
 				label: "Contact",
-				href: "/about",
+				href: "/contact",
 			},
 		],
 	},

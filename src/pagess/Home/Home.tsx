@@ -1,7 +1,7 @@
 "use client";
 
-import HeroSection from "@/sections/HeroSection/HeroSection";
-import RestSection from "@/sections/RestSection/RestSection";
+import HeroSection from "@/pagess/Home/sections/HeroSection/HeroSection";
+import RestSection from "@/pagess/Home/sections/RestSection/RestSection";
 import { animateScroll as scroll } from "react-scroll";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";

@@ -5,56 +5,58 @@ import { data, FooterItem } from "./data";
 
 export default function Footer() {
 	return (
-		<div className="bg-[#142828] text-white xl:h-screen py-[50px] lg:py-[120px] px-[15px] md:px-[30px] lg:px-[100px] xl:px-[150px] relative">
-			<div className="flex flex-col lg:flex-row gap-x-[100px] lg:gap-x-[200px] xl:gap-[400px] items-start pb-[60px] border-b border-[#1F3232]">
-				<div className="text-white mt-0 lg:mt-2 mb-4 lg:mb-0">
-					<Asterix />
-				</div>
+		<footer className="w-full bg-[#142828]">
+			<div className="max-w-[1680px] mx-auto text-white xl:h-screen py-[50px] lg:py-[120px] px-[15px] md:px-[30px] lg:px-[100px] xl:px-[150px] relative">
+				<div className="flex flex-col lg:flex-row gap-x-[100px] lg:gap-x-[200px] xl:gap-[400px] items-start pb-[60px] border-b border-[#1F3232]">
+					<div className="text-white mt-0 lg:mt-2 mb-4 lg:mb-0">
+						<Asterix />
+					</div>
 
-				<div className="flex flex-col">
-					<h1 className="text-[40px] md:text-[45px]  xl:text-[54px] tracking-tighter font-medium leading-[54px] md:leading-[62px] xl:leading-[82px] text-white">
-						Let&apos;s create something exceptional
-					</h1>
+					<div className="flex flex-col">
+						<h1 className="text-[40px] md:text-[45px]  xl:text-[54px] tracking-tighter font-medium leading-[54px] md:leading-[62px] xl:leading-[82px] text-white">
+							Let&apos;s create something exceptional
+						</h1>
 
-					<div className="flex items-center gap-2 mt-4">
-						<button className="cursor-pointer bg-white h-[50px] text-[#142828] px-5 rounded-full flex items-center justify-center">
-							<p className="font-medium">How we can help you</p>
-						</button>
-						<button className="cursor-pointer bg-white w-[50px] h-[50px] flex items-center justify-center rounded-full">
-							<svg
-								width="21"
-								height="21"
-								viewBox="0 0 21 21"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M3.83624 10.5001H13.7687L9.51192 6.24336L10.0471 5.63525L15.3173 10.9055L10.0471 16.1758L9.51192 15.5677L13.7687 11.3109H3.83624V10.5001Z"
-									fill="black"
-								/>
-							</svg>
-						</button>
+						<div className="flex items-center gap-2 mt-4">
+							<button className="cursor-pointer bg-white h-[50px] text-[#142828] px-5 rounded-full flex items-center justify-center">
+								<p className="font-medium">How we can help you</p>
+							</button>
+							<button className="cursor-pointer bg-white w-[50px] h-[50px] flex items-center justify-center rounded-full">
+								<svg
+									width="21"
+									height="21"
+									viewBox="0 0 21 21"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M3.83624 10.5001H13.7687L9.51192 6.24336L10.0471 5.63525L15.3173 10.9055L10.0471 16.1758L9.51192 15.5677L13.7687 11.3109H3.83624V10.5001Z"
+										fill="black"
+									/>
+								</svg>
+							</button>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div className="w-full flex items-start gap-[100px] lg:gap-[200px] xl:gap-[400px]">
-				<div className="hidden lg:block text-white mt-2 opacity-0">
-					<Asterix />
+				<div className="w-full flex items-start gap-[100px] lg:gap-[200px] xl:gap-[400px]">
+					<div className="hidden lg:block text-white mt-2 opacity-0">
+						<Asterix />
+					</div>
+
+					<div className="mt-[70px] w-fit grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-10 items-start justify-between">
+						{data.map((item, index) => (
+							<FooterBox
+								footerItem={item}
+								key={index}
+							/>
+						))}
+					</div>
 				</div>
 
-				<div className="mt-[70px] w-fit grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-10 items-start justify-between">
-					{data.map((item, index) => (
-						<FooterBox
-							footerItem={item}
-							key={index}
-						/>
-					))}
+				<div className="w-[85%] absolute bottom-0 left-1/2 -translate-x-1/2 px-[150px]">
+					<WeballyMask />
 				</div>
 			</div>
-
-			<div className="w-[85%] absolute bottom-0 left-1/2 -translate-x-1/2 px-[150px]">
-				<WeballyMask />
-			</div>
-		</div>
+		</footer>
 	);
 }
 

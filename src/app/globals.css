@@ -29,8 +29,21 @@ p,
 a,
 li,
 span,
+input,
+select,
+textarea,
+option,
 button {
 	font-family: "ES Grotesk", Helvetica, sans-serif;
+}
+
+textarea,
+input::placeholder {
+	font-family: "ES Grotesk", Helvetica, sans-serif;
+}
+
+option {
+	color: #8c9696;
 }
 
 .project-image-container {
@@ -40,9 +53,35 @@ button {
 	transform: translateX(-50%);
 }
 
-@media (min-width: 1024px) {
+.navlink {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	font-weight: 600;
+	color: inherit;
+	transition: transform 0.3s ease-in-out;
+	padding-bottom: 2px; /* space between text and underline */
 }
-@media (max-width: 768px) {
+
+.navlink.active {
+	border-bottom: 1px solid currentColor;
+}
+
+.navlink::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 1px;
+	width: 100%;
+	background-color: currentColor;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s ease-in-out;
+}
+
+.navlink:hover::after {
+	transform: scaleX(1);
 }
 
 @media (min-width: 901px) and (max-width: 1023px) {
