@@ -66,7 +66,7 @@ export default function WhatWeBelieve() {
 										initial={{ rotate: 0 }}
 										animate={isInView ? { rotate: 6 } : { rotate: 0 }}
 										transition={{ duration: 0.1, delay: 1.5, ease: "easeOut" }}
-										className="ml-3 lg:ml-0 md:px-5 md:pb-2 md:rounded-full md:border-2 border-[#142828] inline-flex items-center justify-center   xl:leading-[80px]">
+										className="ml-3 lg:ml-0 px-3 md:px-5 md:pb-2 rounded-full border-2 border-[#142828] inline-flex items-center justify-center   xl:leading-[80px]">
 										empathy
 									</motion.span>{" "}
 									and understanding thrive.

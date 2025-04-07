@@ -3,18 +3,18 @@ import Footer from "@/components/Footer/Footer";
 
 export default function RestSection() {
 	return (
-		<div className="pt-[550px] lg:pt-[650px] w-full">
+		<div className="pt-[450px] md:pt-[550px] lg:pt-[650px] w-full">
 			<SectionWrap className="bg-white">
 				<div className="flex flex-col">
-					<div className="flex items-start justify-between border-t border-[#F1F2F2] py-[25px] md:py-[50px]">
-						<div className="flex w-full items-start">
-							<div className="flex items-center gap-2 w-[130px] md:w-[180px] lg:w-[400px]">
-								<h1 className="text-[20px] md:text-[26px] tracking-tighter w-full">
-									New Business
+					<div className="flex items-start justify-between border-t border-[#F1F2F2] py-[25px] md:py-[25px] lg:py-[50px]">
+						<div className="flex flex-col lg:flex-row  gap-y-[40px] w-full items-start">
+							<div className="w-fit md:w-[280px] lg:w-[440px]">
+								<h1 className="text-[20px] md:text-[26px] tracking-tighter w-fit">
+									We&apos;re available 24/7
 								</h1>
 							</div>
 
-							<div className="ml-6 md:ml-0 lg:ml-[200px] xl:ml-[300px] w-full">
+							<div className="ml-0 md:ml-0 lg:ml-[50px] xl:ml-[300px] w-full">
 								<div className="flex items-center gap-6">
 									<div>
 										<img

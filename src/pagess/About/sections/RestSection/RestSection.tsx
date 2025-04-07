@@ -5,7 +5,7 @@ import OurPrinciples from "./OurPrinciples/OurPrinciples";
 
 export default function RestSection() {
 	return (
-		<div className="pt-[550px] lg:pt-[650px] w-full">
+		<div className="pt-[450px] lg:pt-[650px] w-full">
 			<CoverSection />
 			<OurPrinciples />
 			<WhatWeBelieve />

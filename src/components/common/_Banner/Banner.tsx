@@ -27,13 +27,13 @@ export default function Banner({ title, title2, pageTitle }: BannerProps) {
 
 				<div className="mt-[150px] 2xl:mt-[200px] flex items-start justify-between">
 					<div className="flex">
-						<div className="flex items-center gap-2 w-[280px] lg:w-[180px]">
+						<div className="flex items-center gap-2 w-[200px] md:w-[280px] lg:w-[180px]">
 							<div className="bg-black rounded-full w-3 h-3"></div>
 							<h3 className="font-semibold">WA/00</h3>
 						</div>
 					</div>
 					<div>
-						<h3 className="font-medium tracking-tight">/ {pageTitle}</h3>
+						<h3 className="font-medium tracking-tight w-fit">/ {pageTitle}</h3>
 					</div>
 				</div>
 			</div>
