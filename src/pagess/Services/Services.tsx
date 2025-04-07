@@ -1,14 +1,15 @@
 import PageTemplate from "@/components/common/_Page/PageTemplate";
 import RestSection from "./sections/RestSection/RestSection";
 
-export default function Contact() {
+export default function Services() {
 	return (
-		<>
+		<div>
 			<PageTemplate
-				title="Let’s turn your vision into something remarkable."
-				pageTitle="contact">
+				title="Shaping bold identities and digital experiences for startups.
+"
+				pageTitle="services">
 				<RestSection />
 			</PageTemplate>
-		</>
+		</div>
 	);
 }

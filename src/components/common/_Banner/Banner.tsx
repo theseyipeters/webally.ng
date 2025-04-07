@@ -2,15 +2,26 @@
 
 import SectionWrap from "@/components/common/SectionWrap/SectionWrap";
 
-export default function Banner() {
+interface BannerProps {
+	title: string;
+	title2?: string;
+	pageTitle: string;
+}
+
+export default function Banner({ title, title2, pageTitle }: BannerProps) {
 	return (
 		<SectionWrap>
 			<div className="pt-[120px] w-full">
 				<div className="flex flex-col lg:flex-row items-start w-full">
 					<div className="w-full">
 						<h1 className="text-[28px] md:text-[55px] lg:text-[60px] xl:text-[60px] 2xl:text-[60px] tracking-tighter font-medium leading-[34px] md:leading-[62px] xl:leading-[72px] w-full md:w-[90%] lg:[80%] xl:w-[90%]">
-							Let’s turn your vision into something remarkable.
+							{title}
 						</h1>
+						{title2 && (
+							<h1 className="text-[28px] md:text-[55px] lg:text-[60px] xl:text-[60px] 2xl:text-[60px] tracking-tighter font-medium leading-[34px] md:leading-[62px] xl:leading-[72px]">
+								{title2}
+							</h1>
+						)}
 					</div>
 				</div>
 
@@ -22,7 +33,7 @@ export default function Banner() {
 						</div>
 					</div>
 					<div>
-						<h3 className="font-medium tracking-tight">/ contact</h3>
+						<h3 className="font-medium tracking-tight">/ {pageTitle}</h3>
 					</div>
 				</div>
 			</div>

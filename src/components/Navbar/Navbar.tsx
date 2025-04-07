@@ -159,13 +159,17 @@ export default function Navbar() {
 									))}
 								</div>
 
-								<div className="flex items-center gap-2 mt-6 mb-[100px] w-full justify-between">
-									<button className="cursor-pointer bg-white h-[70px] text-[#142828] px-8 rounded-full flex items-center justify-center">
+								<div className="flex items-center gap-2 mt-6 mb-[3%] w-full justify-between">
+									<a
+										href="/contact/new-project"
+										className="cursor-pointer bg-white h-[70px] text-[#142828] px-8 rounded-full flex items-center justify-center">
 										<p className="font-medium text-lg">
 											Let&apos;s work together
 										</p>
-									</button>
-									<button className="cursor-pointer bg-white w-[60px] h-[60px] flex items-center justify-center rounded-full">
+									</a>
+									<a
+										href="/contact/new-project"
+										className="cursor-pointer bg-white w-[60px] h-[60px] flex items-center justify-center rounded-full">
 										<svg
 											width="30"
 											height="30"
@@ -177,7 +181,7 @@ export default function Navbar() {
 												fill="black"
 											/>
 										</svg>
-									</button>
+									</a>
 								</div>
 							</div>
 						</div>
