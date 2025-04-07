@@ -6,7 +6,7 @@ import { data, FooterItem } from "./data";
 export default function Footer() {
 	return (
 		<footer className="w-full bg-[#142828]">
-			<div className="max-w-[1680px] mx-auto text-white xl:h-screen py-[50px] lg:py-[120px] px-[15px] md:px-[30px] lg:px-[100px] xl:px-[150px] relative">
+			<div className="max-w-[1680px] mx-auto text-white lg:h-screen py-[50px] lg:py-[120px] px-[15px] md:px-[30px] lg:px-[100px] xl:px-[150px] relative">
 				<div className="flex flex-col lg:flex-row gap-x-[100px] lg:gap-x-[200px] xl:gap-[400px] items-start pb-[60px] border-b border-[#1F3232]">
 					<div className="text-white mt-0 lg:mt-2 mb-4 lg:mb-0">
 						<Asterix />
@@ -52,7 +52,7 @@ export default function Footer() {
 					</div>
 				</div>
 
-				<div className="w-[85%] absolute bottom-0 left-1/2 -translate-x-1/2 px-[150px]">
+				<div className="hidden lg:block w-[85%] absolute bottom-0 left-1/2 -translate-x-1/2 px-[150px]">
 					<WeballyMask />
 				</div>
 			</div>

@@ -29,14 +29,14 @@ interface ServiceBoxProps {
 const ServiceBox = ({ service }: ServiceBoxProps) => {
 	return (
 		<div className="flex items-start justify-between border-t border-[#F1F2F2] py-[25px] md:py-[50px]">
-			<div className="flex w-full items-start">
+			<div className="flex flex-col md:flex-row gap-y-[30px] w-full items-start">
 				<div className="flex items-center gap-2 w-[130px] md:w-[180px] lg:w-[400px]">
 					<h1 className="text-[20px] md:text-[26px] tracking-tighter w-full">
 						{service.serviceName}
 					</h1>
 				</div>
 
-				<div className="ml-6 md:ml-0 lg:ml-[200px] xl:ml-[300px] w-full flex flex-col gap-5">
+				<div className="ml-0 md:ml-6 lg:ml-[200px] xl:ml-[300px] w-full flex flex-col gap-5">
 					<p className="tracking-tighter w-full md:w-[550px] font-medium text-[18px] md:text-[24px]">
 						{service.description}
 					</p>
