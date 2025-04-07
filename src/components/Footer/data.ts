@@ -53,16 +53,16 @@ export const data: FooterItem[] = [
 		title: "Socials",
 		itemList: [
 			{
+				label: "Instagram",
+				href: "https://www.instagram.com/webally.ng/",
+			},
+			{
 				label: "Twitter",
-				href: "/about",
+				href: "/",
 			},
 			{
 				label: "LinkedIn",
-				href: "/about",
-			},
-			{
-				label: "Instagram",
-				href: "/about",
+				href: "/",
 			},
 		],
 	},
@@ -79,24 +79,6 @@ export const data2: Item[] = [
 	},
 	{
 		label: "Cookies",
-		href: "",
-	},
-];
-
-export const socialMediaIcons = [
-	{
-		name: "LinkedIn",
-		icon: "bi:linkedin",
-		href: "",
-	},
-	{
-		name: "Instagram",
-		icon: "bi:instagram",
-		href: "",
-	},
-	{
-		name: "X",
-		icon: "bi:twitter-x",
 		href: "",
 	},
 ];

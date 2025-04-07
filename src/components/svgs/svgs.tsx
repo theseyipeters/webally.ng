@@ -108,3 +108,32 @@ export const Arrow = () => {
 		</svg>
 	);
 };
+export const LogoMark = () => {
+	return (
+		<svg
+			width="45"
+			height="45"
+			viewBox="0 0 67 67"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M32.77 61.2075V6.15596"
+				stroke="#E9DBDB"
+				stroke-width="3.08826"
+				stroke-linecap="square"
+			/>
+			<path
+				d="M60.6445 33.4043H5.59297"
+				stroke="#E9DBDB"
+				stroke-width="3.08826"
+				stroke-linecap="square"
+			/>
+			<path
+				d="M11.4546 16.4238L54.7804 50.3878"
+				stroke="#E9DBDB"
+				stroke-width="3.08825"
+				stroke-linecap="square"
+			/>
+		</svg>
+	);
+};
