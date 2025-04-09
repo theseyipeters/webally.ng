@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script"; // ✅ Import Script from Next
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,7 +20,24 @@ export default function RootLayout({
 					href="/favicon.svg"
 				/>
 			</head>
-			<body className={` antialiased`}>{children}</body>
+
+			{/* ✅ Google Analytics Script */}
+			<Script
+				src="https://www.googletagmanager.com/gtag/js?id=G-3K4T87S1HQ"
+				strategy="afterInteractive"
+			/>
+			<Script
+				id="google-analytics"
+				strategy="afterInteractive">
+				{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-3K4T87S1HQ');
+        `}
+			</Script>
+
+			<body className="antialiased">{children}</body>
 		</html>
 	);
 }
