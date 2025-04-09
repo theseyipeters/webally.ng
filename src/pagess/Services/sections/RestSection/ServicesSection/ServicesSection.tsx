@@ -50,7 +50,15 @@ const ServiceBox = ({ service }: ServiceBoxProps) => {
 					<div className="w-full md:w-[80%] lg:w-[50%] tracking-tight mt-[30px]">
 						<p className="font-semibold">Work examples</p>
 
-						<div className="h-[250px] w-full rounded-xl bg-gray-400 mt-3"></div>
+						{/* <div className="h-[250px] w-full rounded-xl bg-gray-400 mt-3"></div> */}
+
+						<div className="mt-4">
+							<video
+								className="rounded-2xl"
+								src="/assets/0409(1).mp4"
+								autoPlay
+								loop></video>
+						</div>
 					</div>
 				</div>
 			</div>
