@@ -21,7 +21,7 @@ export default function RestSection() {
 											alt=""
 											width={114}
 											className="rounded-lg"
-											src="https://media.licdn.com/dms/image/v2/D4D03AQFBw3ZG21wy0w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729641487309?e=1749686400&v=beta&t=l2vOU9VlRuHODoaPYFpI87noUGmCG5Af6zyWgES9v8w"
+											src="https://media.licdn.com/dms/image/v2/D4D03AQFBw3ZG21wy0w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729641487309?e=1756944000&v=beta&t=LfYL2DQQIb_w5aZI9H2_E1Jo-ifOAwIT18d5idtuXXE"
 										/>
 									</div>
 									<div className="">

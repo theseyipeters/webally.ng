@@ -13,7 +13,7 @@ export default function WhatWeDo() {
 					</h1>
 
 					<div className="mt-[30px] flex items-start justify-between border-b border-[#F1F2F2] pb-6">
-						<div className="flex w-full">
+						<div className="flex w-full flex-1/2">
 							<div className="flex items-center gap-2 w-[100px] md:w-[180px]">
 								<div className="bg-black rounded-full w-3 h-3"></div>
 								<h3 className="font-semibold">WA/02</h3>
@@ -25,7 +25,7 @@ export default function WhatWeDo() {
 								</p>
 							</div>
 						</div>
-						<div className="">
+						<div className="w-fit ml-auto flex justify-end">
 							<Link
 								href={"/"}
 								className="font-medium tracking-tight underline underline-offset-2">

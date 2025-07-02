@@ -28,28 +28,39 @@ export const Project = ({ project }: ProjectProps) => {
 
 			<div className="mt-[10px] lg:mt-[30px]">
 				<p className="tracking-tighter w-full lg:w-[600px] font-medium text-base md:text-lg lg:text-xl">
-					Transform the way your engineering and product teams collaborate,
-					automating task creation and using natural language to gather project
-					insights.
+					{project.description}
 				</p>
 			</div>
 
-			<div className="hidden lg:block absolute -bottom-[100px] left-15 -rotate-2 p-2 rounded-xl bg-white drop-shadow-2xl">
-				<Image
-					src={project.images[0]}
-					alt=""
-					width={750}
-					height={450}
-				/>
-			</div>
-			<div className="hidden lg:block absolute -bottom-[100px] right-15 rotate-2 p-2 rounded-xl bg-white drop-shadow-2xl">
-				<Image
-					src={project.images[1]}
-					alt=""
-					width={450}
-					height={750}
-				/>
-			</div>
+			{project.images.length > 1 ? (
+				<div className="hidden lg:block absolute -bottom-[100px] left-15 -rotate-2 p-2 rounded-xl bg-white drop-shadow-2xl">
+					<Image
+						src={project.images[0]}
+						alt=""
+						width={750}
+						height={450}
+					/>
+				</div>
+			) : (
+				<div className="hidden lg:block absolute -bottom-[50px] left-1/2 -translate-x-1/2 p-2 rounded-xl bg-white drop-shadow-2xl">
+					<Image
+						src={project.images[0]}
+						alt=""
+						width={750}
+						height={450}
+					/>
+				</div>
+			)}
+			{project.images[1] && (
+				<div className="hidden lg:block absolute -bottom-[100px] right-15 rotate-2 p-2 rounded-xl bg-white drop-shadow-2xl">
+					<Image
+						src={project.images[1]}
+						alt=""
+						width={450}
+						height={750}
+					/>
+				</div>
+			)}
 			<div className="project-image-container block lg:hidden  absolute -bottom-[30px] md:-bottom-[180px]  rotate-0 p-2 rounded-xl bg-white drop-shadow-2xl">
 				<img
 					src={project.images[0]}

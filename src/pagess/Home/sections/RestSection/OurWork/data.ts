@@ -8,6 +8,22 @@ export interface IProject {
 
 export const projects: IProject[] = [
 	{
+		icon: "/images/beatslot/bs.svg",
+		link: "https://beatslot.io",
+		title: "Beatslot",
+		description:
+			"A digital marketplace for beatmakers to share and sell their beats, with future plans to expand into a social network for musicians.",
+		images: ["/images/beatslot/bs1.svg", "/images/beatslot/bs2.svg"],
+	},
+	{
+		icon: "/images/nook/nook.svg",
+		link: "https://ourpool.app",
+		title: "Nook",
+		description:
+			"Nook streamlines property management tasks and facilitates thorough tenant background checks, ensuring a secure and efficient rental process.",
+		images: ["/images/nook/nook-1.svg", "/images/nook/nook-2.svg"],
+	},
+	{
 		icon: "/images/crafter.svg",
 		link: "https://usecrafter.com",
 		title: "Crafter",
@@ -16,51 +32,28 @@ export const projects: IProject[] = [
 		images: ["/images/crafter-1.svg", "/images/crafter-2.svg"],
 	},
 	{
-		icon: "",
+		icon: "/images/mm/mm.svg",
 		link: "https://mockmate.io",
 		title: "MockMate",
 		description:
 			"A random JSON mock data generator for developers, helping to create structured and realistic test data.",
-		images: ["https://mockmate.io/mockmate-preview.png"],
+		images: ["/images/mm/mm1.svg", "/images/mm/mm2.svg"],
 	},
+
 	{
-		icon: "",
-		link: "https://playport.app",
-		title: "Playport",
-		description:
-			"A seamless playlist conversion tool that lets users transfer their playlists between Spotify, Apple Music, and YouTube Music.",
-		images: ["https://playport.app/playport-preview.png"],
-	},
-	{
-		icon: "",
-		link: "https://beatslot.io",
-		title: "Beatslot",
-		description:
-			"A digital marketplace for beatmakers to share and sell their beats, with future plans to expand into a social network for musicians.",
-		images: ["https://beatslot.io/beatslot-preview.png"],
-	},
-	{
-		icon: "",
+		icon: "/images/ourpool/op.svg",
 		link: "https://ourpool.app",
 		title: "OurPool",
 		description:
 			"A matchmaking platform for young people of marriable age, featuring weekly shortlists and curated interactions.",
-		images: ["https://ourpool.app/ourpool-preview.png"],
+		images: ["/images/ourpool/op-1.png"],
 	},
 	{
-		icon: "",
-		link: "https://steady.app",
-		title: "Steady",
-		description:
-			"A habit-tracking and recovery support app for individuals overcoming addiction, offering daily check-ins and goal-setting features.",
-		images: ["https://steady.app/steady-preview.png"],
-	},
-	{
-		icon: "",
+		icon: "/images/common/c.svg",
 		link: "https://commoncolors.io",
 		title: "Common",
 		description:
 			"A tool for generating beautiful color gradients and palettes, perfect for designers and developers.",
-		images: ["https://commoncolors.io/common-preview.png"],
+		images: ["/images/common/c-1.png"],
 	},
 ];
