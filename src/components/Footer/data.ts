@@ -1,6 +1,6 @@
 interface Item {
 	label: string;
-	href: string;
+	href?: string;
 }
 
 interface Office {
@@ -19,8 +19,17 @@ export const data: FooterItem[] = [
 		title: "Contact",
 		itemList: [
 			{
+				label: "+32 465 81 63 68",
+			},
+			{
+				label: "12, Boulevard Saint Michel, Montgomery, Brussels.",
+			},
+
+			{
+				label: "+234 803 856 4918",
+			},
+			{
 				label: "13, Onikepo Akande Street, Lekki, Lagos, Nigeria",
-				href: "/about",
 			},
 		],
 	},

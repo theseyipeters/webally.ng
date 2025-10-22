@@ -15,30 +15,58 @@ export default function RestSection() {
 							</div>
 
 							<div className="ml-0 md:ml-0 lg:ml-[50px] xl:ml-[300px] w-full">
-								<div className="flex items-center gap-6">
-									<div>
-										<img
-											alt=""
-											width={114}
-											className="rounded-lg"
-											src="https://media.licdn.com/dms/image/v2/D4D03AQFBw3ZG21wy0w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729641487309?e=1756944000&v=beta&t=LfYL2DQQIb_w5aZI9H2_E1Jo-ifOAwIT18d5idtuXXE"
-										/>
+								<div>
+									<div className="flex items-center gap-6">
+										<div>
+											<img
+												alt=""
+												width={114}
+												className="rounded-lg"
+												src="/images/wale.jpeg"
+											/>
+										</div>
+										<div className="">
+											<p className="text-lg font-normal tracking-tight">
+												Wale Ajiboye
+											</p>
+											<p className="text-lg font-medium tracking-tight text-black/40">
+												Founder & Lead Designer
+											</p>
+											<p className="text-lg font-medium tracking-tight">
+												+32 465 81 63 68
+											</p>
+											<a
+												href="mailto:wale@webally.ng"
+												className="text-lg font-medium tracking-tight hover:underline transition-all duration-300">
+												wale@webally.ng
+											</a>
+										</div>
 									</div>
-									<div className="">
-										<p className="text-lg font-normal tracking-tight">
-											Seyi Ajiboye
-										</p>
-										<p className="text-lg font-medium tracking-tight text-black/40">
-											Founder & Lead Designer
-										</p>
-										<p className="text-lg font-medium tracking-tight">
-											+234 (0)91 5707 1842
-										</p>
-										<a
-											href="mailto:seyi@webally.ng"
-											className="text-lg font-medium tracking-tight hover:underline transition-all duration-300">
-											seyi@webally.ng
-										</a>
+									<div className="mt-4 flex items-center gap-6">
+										<div>
+											<img
+												alt=""
+												width={114}
+												className="rounded-lg"
+												src="/images/mydp.jpeg"
+											/>
+										</div>
+										<div className="">
+											<p className="text-lg font-normal tracking-tight">
+												Seyi Ajiboye
+											</p>
+											<p className="text-lg font-medium tracking-tight text-black/40">
+												Lead Engineer
+											</p>
+											<p className="text-lg font-medium tracking-tight">
+												+234 (0)91 5707 1842
+											</p>
+											<a
+												href="mailto:seyi@webally.ng"
+												className="text-lg font-medium tracking-tight hover:underline transition-all duration-300">
+												seyi@webally.ng
+											</a>
+										</div>
 									</div>
 								</div>
 								<div className="mt-8">
