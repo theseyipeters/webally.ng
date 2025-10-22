@@ -42,7 +42,7 @@ export default function Footer() {
 						<Asterix />
 					</div>
 
-					<div className="mt-[70px] w-fit grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-10 items-start justify-between">
+					<div className="mt-[70px] w-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-10 items-start justify-between">
 						{data.map((item, index) => (
 							<FooterBox
 								footerItem={item}
@@ -66,18 +66,26 @@ interface FooterItemProps {
 
 function FooterBox({ footerItem }: FooterItemProps) {
 	return (
-		<div className="flex flex-col w-fit lg:w-[200px]">
+		<div className="flex flex-col w-fit lg:w-[200px] xl:w-[300px]">
 			<p className="font-semibold text-lg text-white">{footerItem.title}</p>
 
 			{footerItem.itemList && (
-				<div className="flex flex-col mt-[15px] gap-y-[10px] text-[#5F6C6C]">
+				<div className="flex flex-col mt-[15px] gap-y-[10px] text-[#979999]">
 					{footerItem.itemList.map((item, index) => (
-						<Link
-							key={index}
-							className="w-fit lg:max-w-[150px] text-white-1 hover:underline underline-offset-4 transition-all duration-300"
-							href={item.href}>
-							{item.label}
-						</Link>
+						<>
+							{item.href ? (
+								<Link
+									key={index}
+									className="w-fit lg:max-w-[150px] text-white-1 hover:underline underline-offset-4 transition-all duration-300"
+									href={item.href}>
+									{item.label}
+								</Link>
+							) : (
+								<p className="w-fit lg:max-w-[150px] xl:max-w-[220px] text-white-1 hover:underline underline-offset-4 transition-all duration-300">
+									{item.label}
+								</p>
+							)}
+						</>
 					))}
 				</div>
 			)}

@@ -26,7 +26,7 @@ export default function WeBelieve() {
 					</div>
 
 					<p className="font-semibold mt-[40px]">
-						Small studio from Lagos, Nigeria
+						Design Studio based in Lagos and Brussels
 					</p>
 
 					<p className="w-full lg:w-[400px] xl:w-[600px] text-gray-500/80 mt-[20px]">

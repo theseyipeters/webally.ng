@@ -14,6 +14,10 @@
 	font-style: normal;
 }
 
+* {
+	overscroll-behavior: none;
+}
+
 body {
 	background: #fff;
 	color: #142828;
@@ -58,7 +62,7 @@ option {
 	position: relative;
 	display: inline-block;
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: 500;
 	color: inherit;
 	transition: transform 0.3s ease-in-out;
 	padding-bottom: 2px; /* space between text and underline */
