@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TextArea from "@/components/common/TextArea/TextArea";
 import TextInput from "@/components/common/TextInput/TextInput";
 import { useForm } from "@formspree/react";
+import { getBudgetOptionsByTimezone, IpInfo } from "./data";
 
 const helpOptions = [
 	"Branding / Rebranding",
@@ -15,16 +16,6 @@ const helpOptions = [
 	"Corporate Website",
 	"Custom Web Application",
 	"SEO & Performance Optimization",
-];
-
-const budgetOptions = [
-	"₦50,000 – ₦100,000",
-	"₦100,000 – ₦250,000",
-	"₦250,000 – ₦500,000",
-	"₦500,000 – ₦1,000,000",
-	"₦1,000,000 – ₦3,000,000",
-	"₦3,000,000+",
-	"Not sure yet – Let's discuss",
 ];
 
 const hearAboutUsOptions = [
@@ -40,6 +31,8 @@ const hearAboutUsOptions = [
 ];
 
 export default function NewProject() {
+	const [location, setLocation] = useState<IpInfo>();
+
 	const [formData, setFormData] = useState({
 		full_name: "",
 		email: "",
@@ -49,9 +42,23 @@ export default function NewProject() {
 		budget: "",
 		hear_about_us: "",
 	});
+
+	const handleGetLocation = () => {
+		fetch("https://ipinfo.io/json")
+			.then((res) => res.json())
+			.then((data) => {
+				setLocation(data);
+			})
+			.catch(console.error);
+	};
+
+	useEffect(() => {
+		handleGetLocation();
+	}, []);
 	const [loading, setLoading] = useState(false);
 
 	const [state, handleSubmit] = useForm("mvgkvbja");
+
 	if (state.succeeded) {
 		return (
 			<div className="min-h-screen bg-[#142828] flex items-center justify-center px-[15px] md:px-[30px]">
@@ -244,13 +251,15 @@ export default function NewProject() {
 										value={formData.budget}
 										onChange={handleChange}>
 										<option value="">Select</option>
-										{budgetOptions.map((option, index) => (
-											<option
-												key={index}
-												value={option}>
-												{option}
-											</option>
-										))}
+										{getBudgetOptionsByTimezone(location?.timezone).map(
+											(option, index) => (
+												<option
+													key={index}
+													value={option}>
+													{option}
+												</option>
+											)
+										)}
 									</select>
 								</div>
 							</div>
