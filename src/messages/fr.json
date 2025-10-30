@@ -63,7 +63,10 @@
 			"contact": "Contact"
 		},
 		"socials": {
-			"title": "Réseaux sociaux"
+			"title": "Réseaux sociaux",
+			"linkedin": "LinkedIn",
+			"instagram": "Instagram",
+			"twitter": "Twitter"
 		}
 	}
 }
