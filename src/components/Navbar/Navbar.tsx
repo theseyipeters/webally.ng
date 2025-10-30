@@ -6,7 +6,7 @@ import { links } from "./data";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Navbar() {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -15,6 +15,7 @@ export default function Navbar() {
 	const [logo2, setLogo2] = useState(false);
 	const [showMenu, setShowMenu] = useState(false);
 	const locale = useLocale();
+	const t = useTranslations();
 	const pathname = usePathname();
 
 	const handleScroll = () => {
@@ -91,7 +92,7 @@ export default function Navbar() {
 										className={`text-lg tracking-tight navlink ${
 											isActive ? "border-b border-current" : "border-none"
 										}`}>
-										{link.label}
+										{t(link.label)}
 									</Link>
 								);
 							})}
@@ -103,14 +104,14 @@ export default function Navbar() {
 					<a
 						href={`/${locale}/contact/new-project`}
 						className="bg-[#142828] rounded-full text-white px-6 py-2">
-						Let&apos;s talk
+						{t("Navigation.lets_talk")}
 					</a>
 				</div>
 				<div
 					onClick={() => setShowMenu(true)}
 					className="block lg:hidden">
 					<button className="bg-transparent text-[#142828] cursor-pointer">
-						Menu
+						{t("Navigation.menu")}
 					</button>
 				</div>
 			</nav>
@@ -139,7 +140,7 @@ export default function Navbar() {
 									onClick={() => setShowMenu(false)}
 									className="">
 									<button className="cursor-pointer bg-transparent text-white">
-										Close
+										{t("Navigation.close")}
 									</button>
 								</div>
 							</div>
@@ -148,7 +149,7 @@ export default function Navbar() {
 								<div className="flex items-center gap-2 w-[280px] lg:w-[180px]">
 									<div className="bg-white/80 rounded-full w-3 h-3"></div>
 									<h3 className="text-white/80 font-medium text-[20px] tracking-[0px]">
-										Navigation
+										{t("Navigation.navigation")}
 									</h3>
 								</div>
 								<div className="flex flex-col mt-6">
@@ -161,7 +162,7 @@ export default function Navbar() {
 												key={index}
 												className="text-[24px] tracking-tight text-white/50 hover:text-white transition-all duration-300 border-b border-white/10 py-4"
 												href={localizedHref}>
-												{link.label}
+												{t(link.label)}
 											</Link>
 										);
 									})}
@@ -172,7 +173,7 @@ export default function Navbar() {
 										href={`/${locale}/contact/new-project`}
 										className="cursor-pointer bg-white h-[70px] text-[#142828] px-8 rounded-full flex items-center justify-center">
 										<p className="font-medium text-lg">
-											Let&apos;s work together
+											{t("Navigation.lets_work_together")}
 										</p>
 									</a>
 									<a

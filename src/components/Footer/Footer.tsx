@@ -2,10 +2,11 @@ import React from "react";
 import { Asterix, WeballyMask } from "../svgs/svgs";
 import Link from "next/link";
 import { data, FooterItem } from "./data";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Footer() {
 	const locale = useLocale();
+	const t = useTranslations("Footer");
 
 	return (
 		<footer className="w-full bg-[#142828]">
@@ -17,14 +18,14 @@ export default function Footer() {
 
 					<div className="flex flex-col">
 						<h1 className="text-[40px] md:text-[45px]  xl:text-[54px] tracking-tighter font-medium leading-[54px] md:leading-[62px] xl:leading-[82px] text-white">
-							Let&apos;s create something exceptional
+							{t("heading")}
 						</h1>
 
 						<div className="flex items-center gap-2 mt-4">
 							<a
 								href={`/${locale}/contact/new-project`}
 								className="cursor-pointer bg-white h-[50px] text-[#142828] px-5 rounded-full flex items-center justify-center">
-								<p className="font-medium">How we can help you</p>
+								<p className="font-medium">{t("cta")}</p>
 							</a>
 							<a
 								href={`/${locale}/contact/new-project`}
@@ -74,11 +75,12 @@ interface FooterItemProps {
 }
 
 function FooterBox({ footerItem, locale }: FooterItemProps) {
+	const t = useTranslations();
 	return (
 		<div className="flex flex-col w-fit lg:w-[200px] xl:w-[300px]">
-			<p className="font-semibold text-lg text-white">{footerItem.title}</p>
+			<p className="font-semibold text-lg text-white">{t(footerItem.title)}</p>
 
-			{footerItem.title === "Socials" ? (
+			{footerItem.title === "Footer.socials.title" ? (
 				<div className="flex flex-col mt-[15px] gap-y-[10px] text-[#979999]">
 					{footerItem?.itemList?.map((item, index) => (
 						<React.Fragment key={index}>
@@ -87,11 +89,11 @@ function FooterBox({ footerItem, locale }: FooterItemProps) {
 									className="w-fit lg:max-w-[150px] text-white-1 hover:underline underline-offset-4 transition-all duration-300"
 									href={item.href}
 									target="_blank">
-									{item.label}
+									{t(item.label)}
 								</Link>
 							) : (
 								<p className="w-fit lg:max-w-[150px] xl:max-w-[220px] text-white-1 hover:underline underline-offset-4 transition-all duration-300">
-									{item.label}
+									{t(item.label)}
 								</p>
 							)}
 						</React.Fragment>
@@ -105,11 +107,11 @@ function FooterBox({ footerItem, locale }: FooterItemProps) {
 								<Link
 									className="w-fit lg:max-w-[150px] text-white-1 hover:underline underline-offset-4 transition-all duration-300"
 									href={`/${locale}${item.href}`}>
-									{item.label}
+									{t(item.label)}
 								</Link>
 							) : (
 								<p className="w-fit lg:max-w-[150px] xl:max-w-[220px] text-white-1 hover:underline underline-offset-4 transition-all duration-300">
-									{item.label}
+									{t(item.label)}
 								</p>
 							)}
 						</React.Fragment>

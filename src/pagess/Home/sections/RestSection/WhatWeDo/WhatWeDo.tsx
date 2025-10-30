@@ -1,7 +1,9 @@
 import SectionWrap from "@/components/common/SectionWrap/SectionWrap";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function WhatWeDo() {
+	const t = useTranslations("Home");
 	return (
 		<SectionWrap className="bg-white">
 			<section
@@ -9,7 +11,7 @@ export default function WhatWeDo() {
 				className="">
 				<div className="flex flex-col">
 					<h1 className="text-[40px] tracking-tighter font-medium leading-[82px]">
-						What we do
+						{t("what_we_do.title")}
 					</h1>
 
 					<div className="mt-[30px] flex items-start justify-between border-b border-[#F1F2F2] pb-6">
@@ -21,7 +23,7 @@ export default function WhatWeDo() {
 
 							<div>
 								<p className="tracking-tighter w-fit font-medium text-lg">
-									Services
+									{t("what_we_do.services")}
 								</p>
 							</div>
 						</div>
@@ -29,7 +31,7 @@ export default function WhatWeDo() {
 							<Link
 								href={"/"}
 								className="font-medium tracking-tight underline underline-offset-2">
-								More about our process
+								{t("what_we_do.more")}
 							</Link>
 						</div>
 					</div>
@@ -38,14 +40,13 @@ export default function WhatWeDo() {
 						<div className="flex w-full items-start md:items-center">
 							<div className="flex items-center gap-2 w-[130px] md:w-[180px]">
 								<h1 className="text-[20px] md:text-[26px] tracking-tighter">
-									Brand
+									{t("what_we_do.brand.title")}
 								</h1>
 							</div>
 
 							<div className="ml-6 md:ml-0 lg:ml-[200px] xl:ml-[300px] w-full">
 								<p className="tracking-tighter w-full md:w-[450px] font-medium text-[18px] md:text-[24px]">
-									Brand Strategy, Brand Positioning, Naming Identity, Visual
-									Identity, Brand Guidelines, Motion Design, Brand Assets
+									{t("what_we_do.brand.description")}
 								</p>
 							</div>
 						</div>
@@ -54,14 +55,13 @@ export default function WhatWeDo() {
 						<div className="flex w-full items-start md:items-center">
 							<div className="flex items-center gap-2 w-[130px] md:w-[180px]">
 								<h1 className="text-[20px] md:text-[26px] tracking-tighter">
-									Product
+									{t("what_we_do.product.title")}
 								</h1>
 							</div>
 
 							<div className="ml-6 md:ml-0 lg:ml-[200px] xl:ml-[300px] w-full">
 								<p className="tracking-tighter w-full md:w-[450px] font-medium text-[18px] md:text-[24px]">
-									Prototyping, Software Design, Design Systems, Mobile App
-									Design
+									{t("what_we_do.product.description")}
 								</p>
 							</div>
 						</div>
@@ -70,14 +70,13 @@ export default function WhatWeDo() {
 						<div className="flex w-full items-start md:items-center">
 							<div className="flex items-center gap-2 w-[130px] md:w-[180px]">
 								<h1 className="text-[20px] md:text-[26px] tracking-tighter">
-									Content
+									{t("what_we_do.content.title")}
 								</h1>
 							</div>
 
 							<div className="ml-6 md:ml-0 lg:ml-[200px] xl:ml-[300px] w-full">
 								<p className="tracking-tighter w-full md:w-[450px] font-medium text-[18px] md:text-[24px]">
-									Content Strategy, Website Design, Website Development,
-									Marketing Assets
+									{t("what_we_do.content.description")}
 								</p>
 							</div>
 						</div>
