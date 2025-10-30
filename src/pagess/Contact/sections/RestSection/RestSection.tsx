@@ -1,5 +1,6 @@
 import SectionWrap from "@/components/common/SectionWrap/SectionWrap";
 import Footer from "@/components/Footer/Footer";
+import Link from "next/link";
 
 export default function RestSection() {
 	return (
@@ -77,11 +78,11 @@ export default function RestSection() {
 									</p>
 								</div>
 								<div className="mt-8">
-									<a
+									<Link
 										href="/contact/new-project"
 										className="tracking-tight font-medium text-lg underline underline-offset-4 hover:decoration-0 transition-all duration-300">
 										Start a project
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>

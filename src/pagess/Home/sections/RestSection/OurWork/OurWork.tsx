@@ -2,12 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import SectionWrap from "@/components/common/SectionWrap/SectionWrap";
 import { projects } from "./data";
 import { Project } from "@/components/common/Project/Project";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function OurWork() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [isHovered, setIsHovered] = useState(false);
 	const intervalRef = useRef<NodeJS.Timeout | null>(null);
+	const locale = useLocale();
 	const t = useTranslations("Home");
 
 	// Auto-scroll functionality
@@ -157,11 +159,11 @@ export default function OurWork() {
 						</div>
 
 						{/* View All Projects Link */}
-						<a
-							href="/work"
+						<Link
+							href={`${locale}/work`}
 							className="text-sm text-black hover:underline font-medium">
 							{t("our_work.view_all")} →
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>

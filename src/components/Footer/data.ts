@@ -62,15 +62,15 @@ export const data: FooterItem[] = [
 		title: "Footer.socials.title",
 		itemList: [
 			{
-				label: "Instagram",
+				label: "Footer.socials.instagram",
 				href: "https://www.instagram.com/webally.ng/",
 			},
 			{
-				label: "Twitter",
+				label: "Footer.socials.twitter",
 				href: "/",
 			},
 			{
-				label: "LinkedIn",
+				label: "Footer.socials.linkedin",
 				href: "/",
 			},
 		],

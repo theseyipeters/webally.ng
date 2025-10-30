@@ -64,6 +64,7 @@ export default async function LocaleLayout(props: {
 	try {
 		messages = (await import(`../../messages/${locale}.json`)).default;
 	} catch (error) {
+		console.error(error);
 		notFound();
 	}
 
