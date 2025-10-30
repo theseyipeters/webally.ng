@@ -6,6 +6,7 @@ import { links } from "./data";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
 
 export default function Navbar() {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -13,6 +14,7 @@ export default function Navbar() {
 	const [logo1, setLogo1] = useState(true);
 	const [logo2, setLogo2] = useState(false);
 	const [showMenu, setShowMenu] = useState(false);
+	const locale = useLocale();
 	const pathname = usePathname();
 
 	const handleScroll = () => {
@@ -40,6 +42,7 @@ export default function Navbar() {
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
+
 	return (
 		<>
 			<nav
@@ -55,7 +58,7 @@ export default function Navbar() {
 						}`}>
 						{logo1 && (
 							<motion.a
-								href="/"
+								href={`/${locale}`}
 								initial={{ y: -40, opacity: 0 }}
 								animate={{ y: 0, opacity: 1 }}
 								transition={{ duration: 0.5 }}
@@ -66,7 +69,7 @@ export default function Navbar() {
 						)}
 						{logo2 && (
 							<motion.a
-								href="/"
+								href={`/${locale}`}
 								initial={{ y: 40, opacity: 0 }}
 								animate={{ y: 0, opacity: 1 }}
 								transition={{ duration: 0.5 }}
@@ -78,12 +81,13 @@ export default function Navbar() {
 
 						<div className="hidden lg:flex gap-[30px]">
 							{links.map((link, index) => {
-								const isActive = pathname === link.href;
+								const localizedHref = `/${locale}${link.href}`;
+								const isActive = pathname === localizedHref;
 
 								return (
 									<Link
 										key={index}
-										href={link.href}
+										href={localizedHref}
 										className={`text-lg tracking-tight navlink ${
 											isActive ? "border-b border-current" : "border-none"
 										}`}>
@@ -97,7 +101,7 @@ export default function Navbar() {
 
 				<div className="hidden lg:block">
 					<a
-						href="/contact/new-project"
+						href={`/${locale}/contact/new-project`}
 						className="bg-[#142828] rounded-full text-white px-6 py-2">
 						Let&apos;s talk
 					</a>
@@ -122,7 +126,7 @@ export default function Navbar() {
 						<div className="flex flex-col w-full h-full">
 							<div className="flex items-center justify-between w-full">
 								<motion.a
-									href="/"
+									href={`/${locale}`}
 									initial={{ y: -40, opacity: 0 }}
 									animate={{ y: 0, opacity: 1 }}
 									transition={{ duration: 0.5, delay: 0.5 }}
@@ -148,27 +152,31 @@ export default function Navbar() {
 									</h3>
 								</div>
 								<div className="flex flex-col mt-6">
-									{links.map((link, index) => (
-										<Link
-											onClick={() => setShowMenu(false)}
-											key={index}
-											className="text-[24px] tracking-tight text-white/50 hover:text-white transition-all duration-300 border-b border-white/10 py-4"
-											href={link.href}>
-											{link.label}
-										</Link>
-									))}
+									{links.map((link, index) => {
+										const localizedHref = `/${locale}${link.href}`;
+
+										return (
+											<Link
+												onClick={() => setShowMenu(false)}
+												key={index}
+												className="text-[24px] tracking-tight text-white/50 hover:text-white transition-all duration-300 border-b border-white/10 py-4"
+												href={localizedHref}>
+												{link.label}
+											</Link>
+										);
+									})}
 								</div>
 
 								<div className="flex items-center gap-2 mt-6 mb-[3%] w-full justify-between">
 									<a
-										href="/contact/new-project"
+										href={`/${locale}/contact/new-project`}
 										className="cursor-pointer bg-white h-[70px] text-[#142828] px-8 rounded-full flex items-center justify-center">
 										<p className="font-medium text-lg">
 											Let&apos;s work together
 										</p>
 									</a>
 									<a
-										href="/contact/new-project"
+										href={`/${locale}/contact/new-project`}
 										className="cursor-pointer bg-white w-[60px] h-[60px] flex items-center justify-center rounded-full">
 										<svg
 											width="30"

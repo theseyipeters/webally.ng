@@ -2,11 +2,14 @@ import React from "react";
 import { Asterix, WeballyMask } from "../svgs/svgs";
 import Link from "next/link";
 import { data, FooterItem } from "./data";
+import { useLocale } from "next-intl";
 
 export default function Footer() {
+	const locale = useLocale();
+
 	return (
 		<footer className="w-full bg-[#142828]">
-			<div className="max-w-[1680px] mx-auto text-white lg:h-screen py-[50px] lg:py-[120px] px-[15px] md:px-[30px] lg:px-[100px] xl:px-[150px] relative">
+			<div className="max-w-[1680px] mx-auto text-white lg:min-h-screen py-[50px] lg:py-[120px] px-[15px] md:px-[30px] lg:px-[100px] xl:px-[150px] relative">
 				<div className="flex flex-col lg:flex-row gap-x-[100px] lg:gap-x-[200px] xl:gap-[400px] items-start pb-[60px] border-b border-[#1F3232]">
 					<div className="text-white mt-0 lg:mt-2 mb-4 lg:mb-0">
 						<Asterix />
@@ -18,10 +21,14 @@ export default function Footer() {
 						</h1>
 
 						<div className="flex items-center gap-2 mt-4">
-							<button className="cursor-pointer bg-white h-[50px] text-[#142828] px-5 rounded-full flex items-center justify-center">
+							<a
+								href={`/${locale}/contact/new-project`}
+								className="cursor-pointer bg-white h-[50px] text-[#142828] px-5 rounded-full flex items-center justify-center">
 								<p className="font-medium">How we can help you</p>
-							</button>
-							<button className="cursor-pointer bg-white w-[50px] h-[50px] flex items-center justify-center rounded-full">
+							</a>
+							<a
+								href={`/${locale}/contact/new-project`}
+								className="cursor-pointer bg-white w-[50px] h-[50px] flex items-center justify-center rounded-full">
 								<svg
 									width="21"
 									height="21"
@@ -33,7 +40,7 @@ export default function Footer() {
 										fill="black"
 									/>
 								</svg>
-							</button>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -46,6 +53,7 @@ export default function Footer() {
 						{data.map((item, index) => (
 							<FooterBox
 								footerItem={item}
+								locale={locale}
 								key={index}
 							/>
 						))}
@@ -62,22 +70,23 @@ export default function Footer() {
 
 interface FooterItemProps {
 	footerItem: FooterItem;
+	locale: string;
 }
 
-function FooterBox({ footerItem }: FooterItemProps) {
+function FooterBox({ footerItem, locale }: FooterItemProps) {
 	return (
 		<div className="flex flex-col w-fit lg:w-[200px] xl:w-[300px]">
 			<p className="font-semibold text-lg text-white">{footerItem.title}</p>
 
-			{footerItem.itemList && (
+			{footerItem.title === "Socials" ? (
 				<div className="flex flex-col mt-[15px] gap-y-[10px] text-[#979999]">
-					{footerItem.itemList.map((item, index) => (
-						<>
+					{footerItem?.itemList?.map((item, index) => (
+						<React.Fragment key={index}>
 							{item.href ? (
 								<Link
-									key={index}
 									className="w-fit lg:max-w-[150px] text-white-1 hover:underline underline-offset-4 transition-all duration-300"
-									href={item.href}>
+									href={item.href}
+									target="_blank">
 									{item.label}
 								</Link>
 							) : (
@@ -85,7 +94,25 @@ function FooterBox({ footerItem }: FooterItemProps) {
 									{item.label}
 								</p>
 							)}
-						</>
+						</React.Fragment>
+					))}
+				</div>
+			) : (
+				<div className="flex flex-col mt-[15px] gap-y-[10px] text-[#979999]">
+					{footerItem?.itemList?.map((item, index) => (
+						<React.Fragment key={index}>
+							{item.href ? (
+								<Link
+									className="w-fit lg:max-w-[150px] text-white-1 hover:underline underline-offset-4 transition-all duration-300"
+									href={`/${locale}${item.href}`}>
+									{item.label}
+								</Link>
+							) : (
+								<p className="w-fit lg:max-w-[150px] xl:max-w-[220px] text-white-1 hover:underline underline-offset-4 transition-all duration-300">
+									{item.label}
+								</p>
+							)}
+						</React.Fragment>
 					))}
 				</div>
 			)}

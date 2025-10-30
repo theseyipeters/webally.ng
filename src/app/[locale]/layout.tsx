@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import "./globals.css";
+import { NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
+import "../globals.css";
 
 export const metadata: Metadata = {
 	title: "Webally | Design & Development for Modern Businesses",
@@ -46,14 +48,28 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({
-	children,
-}: Readonly<{
+// Pre-generate locales
+export function generateStaticParams() {
+	return [{ locale: "en" }, { locale: "fr" }];
+}
+
+export default async function LocaleLayout(props: {
 	children: React.ReactNode;
-}>) {
+	params: Promise<{ locale: string }>;
+}) {
+	const { children } = props;
+	const { locale } = await props.params;
+
+	let messages;
+	try {
+		messages = (await import(`../../messages/${locale}.json`)).default;
+	} catch (error) {
+		notFound();
+	}
+
 	return (
 		<html
-			lang="en"
+			lang={locale}
 			dir="ltr">
 			<head>
 				<link
@@ -91,7 +107,11 @@ export default function RootLayout({
 			</Script>
 
 			<body className="antialiased">
-				<main>{children}</main>
+				<NextIntlClientProvider
+					locale={locale}
+					messages={messages}>
+					<main>{children}</main>
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);
