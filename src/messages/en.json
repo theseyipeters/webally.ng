@@ -1,0 +1,72 @@
+{
+	"Navigation": {
+		"services": "Services",
+		"work": "Work",
+		"about": "About",
+		"lets_talk": "Let's talk",
+		"lets_work_together": "Let's work together",
+		"menu": "Menu",
+		"close": "Close",
+		"navigation": "Navigation"
+	},
+	"Home": {
+		"hero": {
+			"heading": "Let's make digital growth seamless and reliable with WebAlly.",
+			"description": "Your website is your brand's identity. At WebAlly, we build high-performing sites that drive credibility, clients, and results.",
+			"title": "home"
+		},
+		"what_we_do": {
+			"title": "What we do",
+			"services": "Services",
+			"more": "More about our process",
+			"brand": {
+				"title": "Brand",
+				"description": "Brand Strategy, Brand Positioning, Naming Identity, Visual Identity, Brand Guidelines, Motion Design, Brand Assets"
+			},
+			"product": {
+				"title": "Product",
+				"description": "Prototyping, Software Design, Design Systems, Mobile App Design"
+			},
+			"content": {
+				"title": "Content",
+				"description": "Content Strategy, Website Design, Website Development, Marketing Assets"
+			}
+		},
+		"our_work": {
+			"title": "Our Work",
+			"projects": "Projects",
+			"view_all": "View all projects"
+		},
+		"we_believe": {
+			"title": "We believe in the power of quality, direct and honest communication.",
+			"link": "Learn more about Webally",
+			"studio": "Design Studio based in Lagos and Brussels",
+			"desc_1": "We prioritize your business goals, brand identity, and audience needs to create websites that don’t just look good but drive real business impact.",
+			"desc_2": "Every project is a collaboration where your success is our top priority."
+		}
+	},
+	"About": {
+		"title": "About Us"
+	},
+	"Footer": {
+		"heading": "Let's create something exceptional",
+		"cta": "How we can help you",
+		"contact": {
+			"title": "Contact"
+		},
+		"sitemap": {
+			"title": "Sitemap",
+			"home": "Home",
+			"services": "Services",
+			"work": "Work",
+			"about": "About",
+			"contact": "Contact"
+		},
+		"socials": {
+			"title": "Socials",
+			"linkedin": "LinkedIn",
+			"instagram": "Instagram",
+			"twitter": "Twitter"
+		}
+	}
+}

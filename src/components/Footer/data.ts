@@ -16,7 +16,7 @@ export interface FooterItem {
 
 export const data: FooterItem[] = [
 	{
-		title: "Contact",
+		title: "Footer.contact.title",
 		itemList: [
 			{
 				label: "+32 465 81 63 68",
@@ -34,43 +34,43 @@ export const data: FooterItem[] = [
 		],
 	},
 	{
-		title: "Sitemap",
+		title: "Footer.sitemap.title",
 		itemList: [
 			{
-				label: "Home",
+				label: "Footer.sitemap.home",
 				href: "/",
 			},
 			{
-				label: "Services",
+				label: "Footer.sitemap.services",
 				href: "/services",
 			},
 			{
-				label: "Work",
+				label: "Footer.sitemap.work",
 				href: "/work",
 			},
 			{
-				label: "About",
+				label: "Footer.sitemap.about",
 				href: "/about",
 			},
 			{
-				label: "Contact",
+				label: "Footer.sitemap.contact",
 				href: "/contact",
 			},
 		],
 	},
 	{
-		title: "Socials",
+		title: "Footer.socials.title",
 		itemList: [
 			{
-				label: "Instagram",
+				label: "Footer.socials.instagram",
 				href: "https://www.instagram.com/webally.ng/",
 			},
 			{
-				label: "Twitter",
+				label: "Footer.socials.twitter",
 				href: "/",
 			},
 			{
-				label: "LinkedIn",
+				label: "Footer.socials.linkedin",
 				href: "/",
 			},
 		],

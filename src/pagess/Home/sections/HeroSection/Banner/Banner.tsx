@@ -2,9 +2,11 @@
 
 import SectionWrap from "@/components/common/SectionWrap/SectionWrap";
 import { Asterix } from "@/components/svgs/svgs";
+import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 
 export default function Banner() {
+	const t = useTranslations("Home");
 	const [isScrolled, setIsScrolled] = useState(false);
 
 	const handleScroll = () => {
@@ -34,7 +36,7 @@ export default function Banner() {
 
 					<div className="w-full">
 						<h1 className="text-[40px] md:text-[55px] lg:text-[60px] xl:text-[60px] 2xl:text-[70px] tracking-tighter font-medium leading-[54px] md:leading-[62px] xl:leading-[82px]">
-							Let’s make digital growth seamless and reliable with WebAlly.
+							{t("hero.heading")}
 						</h1>
 					</div>
 				</div>
@@ -48,15 +50,13 @@ export default function Banner() {
 
 						<div>
 							<p className="tracking-tighter w-full lg:w-[600px] font-medium text-lg">
-								Your website is your brand’s identity. At WebAlly, we build
-								high-performing sites that drive credibility, clients, and
-								results.
+								{t("hero.description")}
 							</p>
 						</div>
 					</div>
 					<div>
 						<h3 className="hidden lg:block font-medium tracking-tight">
-							/ home
+							/ {t("hero.title")}
 						</h3>
 					</div>
 				</div>

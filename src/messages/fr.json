@@ -1,0 +1,72 @@
+{
+	"Navigation": {
+		"services": "Services",
+		"work": "Travaux",
+		"about": "Á propos",
+		"lets_talk": "Parlons",
+		"lets_work_together": "Travaillons ensemble",
+		"menu": "Menu",
+		"close": "Fermer",
+		"navigation": "Navigation"
+	},
+	"Home": {
+		"hero": {
+			"heading": "Avec WebAlly, la croissance numérique devient fluide et fiable.",
+			"description": "Votre site web est l’identité de votre marque. Chez WebAlly, nous créons des sites performants qui génèrent de la crédibilité, des clients et des résultats.",
+			"title": "page d'accueil"
+		},
+		"what_we_do": {
+			"title": "Ce que nous faisons",
+			"services": "Services",
+			"more": "Plus d'informations sur notre processus",
+			"brand": {
+				"title": "Marque",
+				"description": "Stratégie de marque, positionnement de marque, identité de marque, identité visuelle, charte graphique, design d'animation, éléments de marque"
+			},
+			"product": {
+				"title": "Produit",
+				"description": "Prototypage, conception de logiciels, systèmes de conception, conception d'applications mobiles"
+			},
+			"content": {
+				"title": "Contenu",
+				"description": "Stratégie de contenu, conception de sites web, développement de sites web, outils marketing"
+			}
+		},
+		"our_work": {
+			"title": "Notre travail",
+			"projects": "Projets",
+			"view_all": "Voir tous les projets"
+		},
+		"we_believe": {
+			"title": "Nous croyons au pouvoir d'une communication de qualité, directe et honnête.",
+			"link": "Découvrez Webally",
+			"studio": "Studio de design basé à Lagos et à Bruxelles",
+			"desc_1": "Nous privilégions vos objectifs commerciaux, l'identité de votre marque et les besoins de votre public afin de créer des sites web qui non seulement sont esthétiques, mais qui génèrent également un réel impact commercial.",
+			"desc_2": "Chaque projet est une collaboration où votre succès est notre priorité absolue."
+		}
+	},
+	"About": {
+		"title": "About Us"
+	},
+	"Footer": {
+		"heading": "Créons quelque chose d'exceptionnel",
+		"cta": "Comment nous pouvons vous aider",
+		"contact": {
+			"title": "Contact"
+		},
+		"sitemap": {
+			"title": "Plan du site",
+			"home": "Accuiel",
+			"services": "Services",
+			"work": "Travaux",
+			"about": "Á propos",
+			"contact": "Contact"
+		},
+		"socials": {
+			"title": "Réseaux sociaux",
+			"linkedin": "LinkedIn",
+			"instagram": "Instagram",
+			"twitter": "Twitter"
+		}
+	}
+}
