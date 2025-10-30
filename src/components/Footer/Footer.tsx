@@ -99,6 +99,24 @@ function FooterBox({ footerItem, locale }: FooterItemProps) {
 						</React.Fragment>
 					))}
 				</div>
+			) : footerItem.title === "Footer.contact.title" ? (
+				<div className="flex flex-col mt-[15px] gap-y-[10px] text-[#979999]">
+					{footerItem?.itemList?.map((item, index) => (
+						<React.Fragment key={index}>
+							{item.href ? (
+								<Link
+									className="w-fit lg:max-w-[150px] text-white-1 hover:underline underline-offset-4 transition-all duration-300"
+									href={`/${locale}${item.href}`}>
+									{item.label}
+								</Link>
+							) : (
+								<p className="w-fit lg:max-w-[150px] xl:max-w-[220px] text-white-1 hover:underline underline-offset-4 transition-all duration-300">
+									{item.label}
+								</p>
+							)}
+						</React.Fragment>
+					))}
+				</div>
 			) : (
 				<div className="flex flex-col mt-[15px] gap-y-[10px] text-[#979999]">
 					{footerItem?.itemList?.map((item, index) => (
