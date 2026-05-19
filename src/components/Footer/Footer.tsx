@@ -65,6 +65,11 @@ export default function Footer() {
 					<WeballyMask />
 				</div>
 			</div>
+			<div className="max-w-[1680px] mx-auto px-[15px] md:px-[30px] lg:px-[100px] xl:px-[150px] pb-6 lg:pb-8 relative z-10">
+				<p className="text-[#979999] text-sm text-center lg:text-left">
+					© {new Date().getFullYear()} Webally. A subsidiary of Rangeway Limited. All rights reserved.
+				</p>
+			</div>
 		</footer>
 	);
 }

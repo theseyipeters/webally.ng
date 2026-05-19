@@ -18,14 +18,14 @@ export const metadata: Metadata = {
 		"Rebranding",
 		"E-Commerce",
 	],
-	authors: [{ name: "Webally Team", url: "https://webally.ng" }],
+	authors: [{ name: "Webally Team", url: "https://webally.co" }],
 	creator: "Webally",
-	metadataBase: new URL("https://webally.ng"),
+	metadataBase: new URL("https://webally.co"),
 	openGraph: {
 		title: "Webally | Website Design & Development",
 		description:
 			"We help businesses grow through beautiful, effective websites.",
-		url: "https://webally.ng",
+		url: "https://webally.co",
 		siteName: "Webally",
 		images: [
 			{
