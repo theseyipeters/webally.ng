@@ -37,9 +37,9 @@ export default function RestSection() {
 												+32 465 81 63 68
 											</p>
 											<a
-												href="mailto:wale@webally.ng"
+												href="mailto:wale@webally.co"
 												className="text-lg font-medium tracking-tight hover:underline transition-all duration-300">
-												wale@webally.ng
+												wale@webally.co
 											</a>
 										</div>
 									</div>
@@ -63,9 +63,9 @@ export default function RestSection() {
 												+234 (0)91 5707 1842
 											</p>
 											<a
-												href="mailto:seyi@webally.ng"
+												href="mailto:seyi@webally.co"
 												className="text-lg font-medium tracking-tight hover:underline transition-all duration-300">
-												seyi@webally.ng
+												seyi@webally.co
 											</a>
 										</div>
 									</div>
